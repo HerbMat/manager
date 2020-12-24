@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  mongo:
+    image: mongo
+    ports:
+      - 27017:27017
+    volumes:
+      - /data/db
+  mongo-raspberry:
+    image: andresvidal/rpi3-mongodb3
+    ports:
+      - 27017:27017
+    volumes:
+      - /data/db
